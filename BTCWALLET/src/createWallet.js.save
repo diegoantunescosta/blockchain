@@ -1,0 +1,26 @@
+// importando as dependencias
+
+const bip32 = require('bip21')
+const bip39 = require('bip39')
+const bitcoin = require('bitcoin-lib')
+
+// definir rede
+// bitcoin - rede principal - mainnet
+//testenet - rede de teste
+
+const network = bitcoin.networks.testnet
+
+const path =  ` m/49'/1'/0'/0`
+
+// criando minemonico para seed (palavras de senha)
+
+let mnemonic = bip39.generateMnemonic()
+const seed  =  bip30.mnemonicToSeedSync(mnemonic)
+
+//criando  a raiz para carteira  HD
+
+let root  = bip32.fromSeed(seed,network)
+
+// criando um conta  - par pvt-pub keys 
+let
+let root = bip32.fromSeed(seed,network)
